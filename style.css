@@ -1,0 +1,413 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: white; 
+    scroll-behavior: smooth;
+}
+body{
+    background: black;
+}
+section{
+    padding: 2rem 7%;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin: auto;
+    border-bottom: 0.1rem solid rgba(255,255,255,.3);
+    width: 90%;
+}
+.header .navbar a{
+    display: inline-block;
+    margin: 10px;
+}
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(images/2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.home .content{
+    max-width: 60rem;
+}
+.home .content h3{
+    font-size: 6rem;
+    color: #fff;
+}
+.home .content p{
+    font-size: 1.3rem;
+    font-weight: lighter;
+    line-height: 1,8;
+    padding: 1rem 0;
+    color: #eee;
+}
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .7rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    border: 1px solid red;
+    background:none;
+    transition: 0.8s;
+    outline: none;
+    border-radius: 4px;
+    position: relative;
+    z-index: 1;
+}
+.btn:hover{
+    color: #13131a;
+}
+.btn::before{
+    transition: 0.8s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: red;
+}
+.btn:hover::before{
+    transition: 0.8s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+}
+.heading{
+    text-align: center;
+    font-size:xx-large;
+    padding: 1rem;
+}
+.heading span{
+    color: red;
+}
+.menu h2{
+    text-align: center;
+    font-style: italic;
+}
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    gap: 1.5rem;
+}
+.menu .box-container .box{
+    padding: 5rem;
+    text-align: center;
+    border:0.1rem solid rgba(255,255,255,.3) ;
+}
+.menu .box-container .box img{
+    height: auto;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.menu .box-container .box img:hover{
+    transform: scale(1.04);
+}
+.about .row{
+    display: flex;
+    align-items: center;
+    background: #13131a;
+    flex-wrap:wrap;
+}
+.about .row .image{
+    flex: 1 1 27.5rem;
+}
+.about .row .image img{
+    width: 100%;
+}
+.about .row .content{
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+.about .row .content h3{
+    font-size: 3rem;
+}
+.about .row .content p{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+}
+.products{
+    padding: 50px;
+}
+.products h2{
+    padding: 10px;
+    text-align: center;
+    text-decoration:underline;
+    font-style: oblique;
+    text-decoration-color: red;
+}
+.products p{
+    text-align: center;
+    font-style: italic;
+}
+.products .icons-container{
+    display: grid;
+    grid-template-columns: repeat( auto-fit,minmax(3rem,1fr));
+    padding: 30px 150px;
+    grid-column-gap: 20px;
+    grid-row-gap:30px;
+    gap: 1.5rem;
+    justify-items: center;
+    text-align: center;
+}
+.products .icons-container .icon img{
+    height: 120px;
+    width: 120px;
+    cursor: pointer;
+}
+.products .icons-container .icon img:hover{
+    transform: scale(1.1);
+}
+.products .icons-container .icon h4{
+    cursor: pointer;
+}
+.reviwe .profiles-container{
+    display: grid;
+    grid-template-columns: repeat( auto-fit,minmax(3rem,1fr));
+    padding: 40px 20px;
+    grid-column-gap: 20px;
+    grid-row-gap:30px;
+    gap: 1.5rem;
+    justify-items: center;
+    text-align: center;
+}
+.reviwe .profiles-container .prof1{
+    display: flex;
+    align-items: center;
+    background: #13131a;
+    flex-wrap:wrap;
+}
+.reviwe .profiles-container .prof1 img{
+    width: 100%;
+}
+.reviwe .profiles-container .prof2{
+    display: flex;
+    align-items: center;
+    background: #13131a;
+    flex-wrap:wrap;
+}
+.reviwe .profiles-container .prof2 img{
+    width: 100%;
+}
+.reviwe .profiles-container .prof3{
+    display: flex;
+    align-items: center;
+    background: #13131a;
+    flex-wrap:wrap;
+}
+.reviwe .profiles-container .prof3 img{
+    width: 100%;
+}
+.reviwe .profiles-container h3{
+    font-style: italic;
+    color: aqua;
+    padding: 30px;
+    
+}
+.reviwe .profiles-container p{
+    font-size: 1.3rem;
+    padding: 10px;
+}
+.contact-form{
+    max-width: 600px;
+    margin: auto;
+    padding: 0 10px;
+    overflow: hidden;
+}
+.contact-form-text{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 16px 0;
+    border: 0;
+    background: #eee;
+    padding: 20px 40px;
+    outline: none;
+    color: black;
+    transition: 0.5s;
+}
+.contact-form-text:focus{
+    box-shadow: 0 0 10px 4px red;
+}
+textarea.contact-form-text{
+    resize: none;
+    height: 120px;
+}
+footer{
+    background: #13131a;
+    min-height: fit-content;
+    width: 100vw;
+    font-family: "Open sans";
+    padding-top: 40px;
+    color: #fff;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.footer-content .socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.footer-content .socials li{
+    margin: 0 10px;
+}
+.footer-content .socials a{
+    color: #fff;
+    text-decoration: none;
+}
+.footer-content .socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;    
+}
+.footer-content .socials a i:hover{
+    color: red;
+}
+.footer-bottem{
+    background: #000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottem p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottem span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+.gotopbtn{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: red;
+    bottom: 40px;
+    right: 50px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 22px;
+    border-style:ridge;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 yellow;
+    transition: ease-out 0.3s;
+}
+.gotopbtn:hover{
+    box-shadow: inset 50px 0 0 0 yellow;
+}
+@media screen  and (max-width:987px){
+    .header .navbar a{
+        display: flex;
+        margin: 20px;
+    }
+    .menu .box-container{
+        display: grid;
+        grid-template-columns: repeat( auto-fit,minmax(15rem,1fr));
+        padding: 30px 20px;
+        grid-column-gap: 20px;
+        grid-row-gap:30px;
+        gap: 1.5rem;
+    }
+    .menu .box-container .box{
+        padding: 1rem;
+        text-align: center;
+        border:0.1rem solid rgba(255,255,255,.3) ;
+    }
+    .menu .box-container .box img{
+        height: 10rem;
+        cursor: pointer;
+        transition: 0.2s ease;
+    }
+    .products .icons-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-left: 50px;
+        padding-right: 50px;
+        grid-column-gap: 20px;
+        grid-row-gap:30px;;
+        gap: 1.5rem;
+        justify-items: center;
+        text-align: center;
+    }
+    .about .row .content h3{
+        font-size: 2rem;
+    }
+    .about .row .content p{
+        font-size: 1rem;
+        padding: 1rem 0;
+    }
+    .reviwe .profiles-container{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .reviwe .profiles-container .prof1{
+        display: flex;
+        align-items: center;
+        background: #13131a;
+        width: 200px;
+    }
+    .reviwe .profiles-container .prof1 img{
+        width: 100%;
+    }
+    .reviwe .profiles-container .prof2{
+        display: flex;
+        align-items: center;
+        background: #13131a;
+        width: 200px;
+    }
+    .reviwe .profiles-container .prof2 img{
+        width: 100%;
+    }
+    .reviwe .profiles-container .prof3{
+        display: flex;
+        align-items: center;
+        background: #13131a;
+        width: 200px;
+    }
+    .reviwe .profiles-container .prof3 img{
+        width: 100%;
+    }
+    .reviwe .profiles-container h3{
+        font-style: italic;
+        color: aqua;
+        padding: 10px;
+        font-size: 1.3rem;
+    }
+    .reviwe .profiles-container p{
+        font-size: 1rem;
+        padding: 5px;
+    }
+}/*end*/
